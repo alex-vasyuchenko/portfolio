@@ -80,6 +80,8 @@ body {
 .main .title-h1 {
     position: relative;
     z-index: 4;
+    letter-spacing: 0.03em;
+    margin-top: 38px;
 }
 
 .name {
@@ -94,15 +96,15 @@ body {
 }
 
 .photo {
-    margin-bottom: 120px;
+    margin-bottom: 93px;
     width: 100%;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 44px;
+    padding-bottom: 65px;
 }
 
 .nav {
@@ -113,8 +115,8 @@ header {
 }
 
 .nav-item {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
 .nav-item:first-child {
@@ -128,6 +130,7 @@ header {
 .nav-link {
     text-decoration: none;
     font-size: 14px;
+    transition: 0.2s color ease;
 }
 
 .nav-link:hover {
@@ -152,11 +155,42 @@ header {
     display: none;
 }
 
+.nav-social .nav-item {
+    position: relative;
+}
+
+.nav-social .nav-item::before {
+    content: '';
+    width: 1px;
+    height: 24px;    
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 12px);
+}
+
+.nav-social .nav-item:first-child::before {
+    display: none;
+}
+
+.nav-social .nav-link {
+    font-size: 16px;
+}
+
+.nav-social .nav-item {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.nav-social .nav-item:last-child {
+    padding-right: 0;
+}
+
 .social {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 60px;
-    margin-top: 100px;
+    padding-bottom: 48px;
+    margin-top: 106px;
 }
 
 .social-item:last-child {
@@ -169,6 +203,13 @@ header {
     align-items: center;
     font-size: 16px;
     font-weight: 700;
+    padding-bottom: 11px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s border-bottom ease;
+}
+
+.project:hover {
+    border-bottom: 2px solid #010101;
 }
 
 .project-img {
@@ -186,12 +227,16 @@ header {
 
 .skill {
     display: flex;
-    justify-content: space-between;
-    padding-top: 60px;
+    padding-top: 47px;
+}
+
+.skill .title-h3 {
+    letter-spacing: 0.03em;
 }
 
 .skill-item {
-    flex: 0 0 21%;
+    flex: 0 0 22%;
+    margin-right: 3%;
 }
 
 .skill .title-h3 {
@@ -207,7 +252,7 @@ header {
     height: 253px;
     position: absolute;
     left: -128px;
-    top: calc(50% - 126px);
+    top: calc(50% - 138px);
     z-index: 1;
 }
 
@@ -216,18 +261,18 @@ header {
     height: 106px;
     position: absolute;
     right: 38px;
-    top: calc(50% - 53px);
+    top: calc(50% - 60px);
 }
 
 .triangle {
     position: absolute;
     left: -151px;
-    top: 0;
+    top: -23px;
     z-index: 2;
 }
 
 .section-steps {
-    padding-top: 180px;
+    padding-top: 167px;
     padding-bottom: 198px;
 }
 
@@ -236,8 +281,8 @@ header {
     justify-content: space-between;
     align-items: center;
     line-height: 150%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .steps-title {
@@ -245,7 +290,7 @@ header {
 }
 
 .steps-title span {
-    margin-right: 45px;
+    margin-right: 38px;
 }
 
 .steps-description {
@@ -256,7 +301,7 @@ header {
 
 .about {
     display: grid;
-    grid-template: 349px / repeat(4, 1fr);
+    grid-template: 290px / repeat(4, 1fr);
 }
 
 .about-title {
@@ -267,7 +312,7 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     line-height: 150%;
-    padding-top: 62px;
+    padding-top: 67px;
     padding-bottom: 62px;
 }
 
@@ -277,35 +322,48 @@ header {
     font-size: 28px;
     line-height: 150%;
     opacity: 0.8;
-    padding: 62px 10px 62px 20px;
+    padding: 62px 10px 62px 9px;
 }
 
 .about-01 {
     grid-column: 3/4;
     grid-row: 2/3;
-    padding: 65px 20px 35px 20px;
+    padding: 47px 20px 35px 9px;
 }
 
 .about-02 {
     grid-column: 4/5;
     grid-row: 2/3;
-    padding: 65px 10px 35px 10px;
+    padding: 47px 10px 35px 12px;
 }
 
 .about-03 {
     grid-column: 3/4;
     grid-row: 3/4;
-    padding: 35px 20px;
+    padding: 14px 20px 14px 9px;
 }
 
 .about-04 {
     grid-column: 4/5;
     grid-row: 3/4;
-    padding: 35px 10px 35px 10px;
+    padding: 14px 10px 14px 12px;
 }
 
 .about-item .description {
     font-size: 14px;
     line-height: 150%;
     opacity: 0.8;
+}
+
+.about-item > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-item .title-h3 {
+    margin-bottom: 21px;
+}
+
+.section-about {
+    padding-top: 107px;
 }
