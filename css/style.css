@@ -60,6 +60,28 @@ body {
     border-top: 1px solid #F3F2F0;
 }
 
+.dark .tech-item {
+    border-bottom: 1px solid rgba(243, 242, 240, 0.3);
+    border-right: 1px solid rgba(243, 242, 240, 0.3);
+}
+
+.dark .html, .dark .css, .dark .js, .dark .jquery {
+    border-top: 1px solid rgba(243, 242, 240, 0.3);
+}
+
+.dark .tech-item:first-child,
+.dark .tech-item:nth-child(5) {
+    border-left: 1px solid rgba(243, 242, 240, 0.3);
+}
+
+.dark .tarif-list-item::before {
+    background-color: #F3F2F0;
+}
+
+.dark .tarif-item {
+    border-bottom: 1px solid #F3F2F0;
+}
+
 .light {
     background-color: #F3F2F0;
     color: #010101;
@@ -115,6 +137,28 @@ body {
 
 .light .advantages {
     border-top: 1px solid #010101;
+}
+
+.light .tech-item {
+    border-bottom: 1px solid rgba(1, 1, 1, 0.3);
+    border-right: 1px solid rgba(1, 1, 1, 0.3);
+}
+
+.light .html, .light .css, .light .js, .light .jquery {
+    border-top: 1px solid rgba(1, 1, 1, 0.3);
+}
+
+.light .tech-item:first-child,
+.light .tech-item:nth-child(5) {
+    border-left: 1px solid rgba(1, 1, 1, 0.3);
+}
+
+.light .tarif-list-item::before {
+    background-color: #010101;
+}
+
+.light .tarif-item {
+    border-bottom: 1px solid #010101;
 }
 
 .wrapper {
@@ -567,3 +611,165 @@ header {
     line-height: 150%;
     opacity: 0.8;
 }
+
+.tech {
+    display: grid;
+    grid-template: repeat(2, 148px) / repeat(4, 1fr);
+    text-align: center;
+}
+
+.tech-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-image {
+    filter: grayscale(100%);
+    transition: 0.2s ease;
+}
+
+.tech-item:hover .tech-image {
+    filter: grayscale(0);
+}
+
+.html img {
+    width: 77px; 
+    height: 84px;
+}
+
+.css img {
+    width: 76px; 
+    height: 82px;  
+}
+
+.js img {
+    width: 72px; 
+    height: 77px;  
+}
+
+.jquery img {
+    width: 76px; 
+    height: 82px;  
+}
+
+.bootstrap img {
+    width: 71px; 
+    height: 71px;  
+}
+
+.php img {
+    width: 105px; 
+    height: 55px;  
+}
+
+.vue img {
+    width: 81px; 
+    height: 70px;  
+}
+
+.wp img {
+    width: 74px; 
+    height: 74px;  
+}
+
+.section-tech {
+    margin-top: 184px;
+}
+
+.ui-tooltip {
+    background-color: #E31B1B;
+    border-color: #E31B1B !important;
+    border-radius: 0;
+    text-align: center;
+    box-shadow: none !important;
+    font-size: 10px;
+    color: rgba(243, 242, 240, 0.8);
+    max-width: 232px;
+    line-height: 150%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ui-tooltip-content::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -20px;
+    margin: 0 auto;
+    width: 2px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #E31B1B;
+}
+
+.tarif {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+}
+
+.tarif-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 150%;
+}
+
+.tarif-description {
+    font-size: 28px;
+    line-height: 150%;
+    opacity: 0.8;
+}
+
+.tarif-name {
+    font-size: 28px;
+    line-height: 150%;
+}
+
+.tarif-text {
+    font-size: 16px;
+    line-height: 150%;
+    opacity: 0.8;
+}
+
+.tarif .project {
+    display: inline-flex;
+}
+
+.tarif-pack {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+}
+
+.tarif-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tarif-list-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.tarif-list-item::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2px);
+}
+
+.tarif-price {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 150%;
+}
+
