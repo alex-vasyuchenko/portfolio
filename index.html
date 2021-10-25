@@ -592,6 +592,11 @@
         $(".close-menu").click(function() {
             $(".mobile-menu").hide();
         });
+
+        $(".mobile-menu-content a").click(function() {
+            $(".mobile-menu").hide();
+            return true;
+        });
     </script>
 </body>
 </html>
